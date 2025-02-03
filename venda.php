@@ -1,7 +1,6 @@
 <?php
 class Venda{
     var $nome;
-    var $preço;
     var $quantidade;
 
     function listar(){
