@@ -15,7 +15,7 @@ include '../DB/connect.php';
 
 <body>
     <div class="container">
-            <button class="btn btn-primary my-5"><a href="vendedor.php" class="text-white">Adicionar Vendedor</a>
+            <button class="btn btn-primary my-5"><a href="Vendedor_paste/vendedor.php" class="text-white">Adicionar Vendedor</a>
             
 
             </button>
