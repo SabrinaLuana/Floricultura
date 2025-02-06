@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo - Rosa Vida</title>
-    <link rel="stylesheet" href="Gerenciar.css">
+    <link rel="stylesheet" href="Gerenciar_V.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -26,24 +26,23 @@
 
         <div class="admin-content">
 
-            <h1>Gerenciar Clientes</h1>
+            <h1>Gerenciar Vendedores</h1>
             <section id="clientes">
                 
                 <div class="form-container">
-                    <h2>Adicionar Cliente</h2>
+                    <h2>Adicionar Vendedores</h2>
                     <form>
                         <input type="text" placeholder="Nome Completo" required>
                         <input type="text" placeholder="CPF" required>
                         <input type="email" placeholder="E-mail" required>
                         
                         <input type="tel" placeholder="Telefone" required>
-                        <input type="url" placeholder="Endereço" required>
-                        <button type="submit">Adicionar Cliente</button>
+                        <button type="submit">Adicionar Vendedor</button>
                     </form>
                 </div>
 
                 <div class="table-container">
-                    <h2>Lista de Clientes</h2>
+                    <h2>Lista de Vendedores</h2>
                     <table>
                         <thead>
                             <tr>
@@ -52,7 +51,6 @@
                                 <th>CPF</th>
                                 <th>E-mail</th>
                                 <th>Telefone</th>
-                                <th>Endereço</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -63,7 +61,6 @@
                                 <td>*****</td>
                                 <td>maria@email.com</td>
                                 <td>(11) 99999-9999</td>
-                                <td>Rua sla oque</td>
                                 <td class="action-buttons">
                                     <button class="edit-btn">Editar</button>
                                     <button class="remove-btn">Remover</button>
@@ -80,4 +77,3 @@
     </footer>
 </body>
 </html>
-

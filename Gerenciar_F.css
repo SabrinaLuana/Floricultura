@@ -63,7 +63,7 @@ nav ul li a:hover {
 .admin-content {
     flex-grow: 1;
     background-color: #ecf0f1;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
 
 }
 .admin-content h1{
@@ -86,7 +86,7 @@ nav ul li a:hover {
     max-width: 500px;
     /* margin: 0 auto; */
     margin-top: 30px;
-    margin-right: 80px;
+    margin-right: 400px;
     margin-left: 10px;
 }
 

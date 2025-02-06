@@ -79,6 +79,7 @@ nav ul li a:hover {
     flex: 1 1 30%;
     box-sizing: border-box;
     transition: transform 0.3s ease;
+    margin-right: 10px;
 }
 
 .produto:hover {
@@ -112,6 +113,18 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+@media screen (max-width:639px;) {
+    .produto img {
+        /* max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px; */
+        width: 100%;
+        height: auto;
+    }
+    
 }
 
 
