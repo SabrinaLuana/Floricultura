@@ -40,9 +40,9 @@ if(isset($_POST['cadastrar'])){
 <!-- HTML -->
 
 <!doctype html>
-<html lang="pt-br">
+<htm lang="pt-br">
 <head>
-    <!-- Required meta tags -->
+     <!-- Required meta tags  -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -99,4 +99,4 @@ if(isset($_POST['cadastrar'])){
 
     
 </body>
-</html>
+</html> 

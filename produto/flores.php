@@ -67,12 +67,6 @@ if(isset($_POST['cadastrar'])){
     <input  type="number" min="1" step="1" class="form-control" placeholder="Digite a quantidade" name="qtd"  autocomplete="off">
     </div>
 
-<div class="mb-3">
-    <label class="form-label">Imagem do Produto:</label>
-    <input type="file" class="form-control" name="imagemProduto" accept="image/*" required>
-    </div>
-
-
 
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
     </form>

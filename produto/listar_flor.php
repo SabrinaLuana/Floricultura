@@ -27,7 +27,6 @@ include '../DB/connect.php';
             <th scope="col">Nome</th>
             <th scope="col">Preço</th>
             <th scope="col">Quantidade</th>
-            <th scope="col">Imagem</th>
             <th scope="col">Ações</th>
             </tr>
         </thead>
@@ -45,7 +44,6 @@ include '../DB/connect.php';
                 $nome=$row['nome'];
                 $preco=$row['preco'];
                 $qtd=$row['qtd'];
-                $img=$row['imagemProduto'];
 
 
 
@@ -55,7 +53,6 @@ include '../DB/connect.php';
                 <td>'.$nome.'</td>
                 <td>'.$preco.'</td>
                 <td>'.$qtd.'</td>
-                <td>'.$img.'</td>
 
                 <td>
                     <button class="btn btn-primary">
