@@ -64,7 +64,8 @@ include '../DB/connect.php';
                     </button>
 
                     <button class="btn btn-danger">
-                        <a href="deletar_cli.php?deleteid='.$id_cli.'" class="text-white">Deletar</a>
+                        <a href="deletar_cli.php?deleteid=' . $id_cli . '" class="text-white" style="text-decoration: none;"
+                            onclick="return confirm(\'Tem certeza que deseja deletar este cliente?\')">Deletar</a>
                     </button>
                 </td>
                 </tr>';

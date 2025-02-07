@@ -60,7 +60,7 @@ include '../DB/connect.php';
                     </button>
 
                     <button class="btn btn-danger">
-                        <a href="deletar_flor.php?deleteid='.$id_flor.'" class="text-white">Deletar</a>
+                        <a href="deletar_flor.php?deleteid=' . $id_flor . '" class="text-white" style="text-decoration: none;" onclick="return confirm(\'Tem certeza que deseja deletar este produto?\')">Deletar</a>
                     </button>
                 </td>
                 </tr>';
