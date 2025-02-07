@@ -1,27 +1,42 @@
-
 <?php
-
 include '../DB/connect.php';
 
-if(isset($_POST['cadastrar'])){
+$id_cli=$_GET['editarid'];
+
+$sql="SELECT * FROM `cliente` where id_cli=$id_cli";
+$result=mysqli_query($conn,$sql);
+
+$row=mysqli_fetch_assoc($result);
+
+$nome=$row['nome'];
+$cpf=$row['cpf'];
+$email=$row['email'];
+$fone=$row['fone'];
+$endereco=$row['endereco'];
+
+
+
+
+
+if(isset($_POST['editar'])){
 
     $nome=$_POST['nome'];
     $cpf=$_POST['cpf'];
     $email=$_POST['email'];
     $fone=$_POST['fone'];
     $endereco=$_POST['endereco'];
-    $senha=$_POST['senha'];
-    $conf_senha=$_POST['conf_senha'];
+    // $senha=$_POST['senha'];
+    // $conf_senha=$_POST['conf_senha'];
 
 
-    $sql= "INSERT INTO cliente (nome,cpf,email,fone,endereco) VALUES('$nome','$cpf','$email','$fone','$endereco')";
+    $sql= "UPDATE `cliente` set nome='$nome',cpf='$cpf',email='$email',fone='$fone', endereco='$endereco' where id_cli=$id_cli";
 
     
 
     $result = mysqli_query($conn,$sql);
 
     if($result){
-        // echo "Dados cadastrados com sucesso!!";
+        // echo "Dados atualizados com sucesso!!";
         header('location: Gerenciar.php');
     }else{
         die(mysqli_error($conn));
@@ -68,15 +83,15 @@ if(isset($_POST['cadastrar'])){
             <section id="clientes">
                 
                 <div class="form-container">
-                    <h2>Cadastrar Cliente</h2>
+                    <h2>Editar Cliente</h2>
                     <form method="POST">
-                        <input type="text" placeholder="Nome Completo" required name="nome" autocomplete="off">
-                        <input type="text" placeholder="CPF" required name="cpf" autocomplete="off">
-                        <input type="email" placeholder="E-mail" required name="email" autocomplete="off">
+                        <input type="text" placeholder="Nome Completo" required name="nome" autocomplete="off" value=<?php echo $nome;?>>
+                        <input type="text" placeholder="CPF" required name="cpf" autocomplete="off" value=<?php echo $cpf;?>>
+                        <input type="email" placeholder="E-mail" required name="email" autocomplete="off" value=<?php echo $email;?>>
                         
-                        <input type="tel" placeholder="Telefone" required name="fone" autocomplete="off"> 
-                        <input type="text" placeholder="Endereço" required name="endereco" autocomplete="off">
-                        <button type="submit" name="cadastrar">Cadastrar Cliente</button>
+                        <input type="tel" placeholder="Telefone" required name="fone" autocomplete="off"value=<?php echo $fone;?>> 
+                        <input type="text" placeholder="Endereço" required name="endereco" autocomplete="off" value=<?php echo $endereco;?>>
+                        <button type="submit" name="editar">Editar</button>
                     </form>
                 </div>
 

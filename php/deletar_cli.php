@@ -10,7 +10,7 @@ if(isset($_GET['deleteid'])){
     $result=mysqli_query($conn,$sql);
     if($result){
         // echo "Cliente Deletado";
-        header('location: listar_cli.php');
+        header('location: Gerenciar.php');
     }else{
         die(mysqli_error($conn));
 

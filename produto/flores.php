@@ -1,6 +1,6 @@
 <?php
 
-include '../DB/connect.php';
+include 'DB/connect.php';
 
 if(isset($_POST['cadastrar'])){
 

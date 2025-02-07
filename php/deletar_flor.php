@@ -1,6 +1,6 @@
 <?php
 
-include 'DB/connect.php';
+include '../DB/connect.php';
 
 if(isset($_GET['deleteid'])){
     $id_flor=$_GET['deleteid'];
@@ -10,7 +10,7 @@ if(isset($_GET['deleteid'])){
     $result=mysqli_query($conn,$sql);
     if($result){
         // echo "flor Deletado";
-        header('location: php/Gerenciar_F.php');
+        header('location: Gerenciar_F.php');
     }else{
         die(mysqli_error($conn));
 

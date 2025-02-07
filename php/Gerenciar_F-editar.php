@@ -1,5 +1,5 @@
 <?php
-include 'DB/connect.php';
+include '../DB/connect.php';
 
 $id_flor=$_GET['editarid'];
 
@@ -13,13 +13,9 @@ $preco=$row['preco'];
 $qtd=$row['qtd'];
 
 
-
-
-
-
 if(isset($_POST['editar'])){
 
-    $nome=$$_POST['nome'];
+    $nome=$_POST['nome'];
     $preco=$_POST['preco'];
     $qtd=$_POST['qtd'];
  
@@ -33,7 +29,7 @@ if(isset($_POST['editar'])){
 
     if($result){
         // echo "Dados atualizados com sucesso!!";
-        header('location: php/Gerenciar_F.php');
+        header('location: Gerenciar_F.php');
     }else{
         die(mysqli_error($conn));
 
@@ -51,7 +47,7 @@ if(isset($_POST['editar'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo - Rosa Vida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/Gerenciar_F.css">
+    <link rel="stylesheet" href="../css/Gerenciar_F.css">
 
     
 </head>
@@ -65,10 +61,10 @@ if(isset($_POST['editar'])){
         
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="php/Gerenciar.php">Clientes</a></li>
-                    <li><a href="php/Gerenciar_V.php">Vendedores</a></li>
-                    <li><a href="php/Gerenciar_F.php">Flores</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="Gerenciar.php">Clientes</a></li>
+                    <li><a href="Gerenciar_V.php">Vendedores</a></li>
+                    <li><a href="Gerenciar_F.php">Flores</a></li>
                 </ul>
             </nav>
 
@@ -125,11 +121,11 @@ if(isset($_POST['editar'])){
 
                                     <td class="action-buttons">
                                         <button class="edit-btn">
-                                            <a href="php/Gerenciar_F-editar.php?editarid='.$id_flor.'">Editar</a>
+                                            <a href="Gerenciar_F-editar.php?editarid='.$id_flor.'">Editar</a>
                                         </button>
 
                                         <button class="remove-btn">
-                                            <a href="php/deletar_flor.php?deleteid='.$id_flor.'"onclick="return confirm(\'Tem certeza que deseja deletar este produto?\')">Deletar</a>
+                                            <a href="deletar_flor.php?deleteid='.$id_flor.'"onclick="return confirm(\'Tem certeza que deseja deletar este produto?\')">Deletar</a>
                                         </button>
                                     </td>
                                     </tr>';
