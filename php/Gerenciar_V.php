@@ -136,9 +136,12 @@ if(isset($_POST['cadastrar'])){
                 </div>
             </section>
         </div>
+
+
+        <footer>
+            <p>&copy; 2024 Rosa Vida Floricultura. Todos os direitos reservados.</p>
+        </footer>
     </div>
-    <footer>
-        <p>&copy; 2024 Rosa Vida Floricultura. Todos os direitos reservados.</p>
-    </footer>
+    
 </body>
 </html>
